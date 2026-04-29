@@ -60,3 +60,48 @@ The project will require the following programming concepts:
 ## Current Step 1 Status
 
 At this stage, the project structure has been created. The planned system, agent-based approach, required tools, and programming concepts have been defined. The next step will be to implement the first working version of the Python application.
+
+## Step 2 – Updated System Description Based on Implementation Progress
+
+The system has been implemented as a command-line Python application. The current version allows the user to provide a local `.txt` or `.md` file and select one of three task types: summary, search, or statistics. The agent reads the document, cleans the text, selects the correct tool, processes the content, and returns a meaningful result.
+
+The current implementation follows the system idea described in Step 1. The main difference is that the planned tools have now been implemented as Python functions and connected through the agent workflow.
+
+## Refined Programming Concepts Actually Used
+
+The following programming concepts are used in the implemented system:
+
+- Classes
+- Functions
+- File handling
+- Lists
+- Dictionaries
+- String processing
+- Regular expressions
+- Conditional statements
+- Exception handling
+- Modular programming
+- Basic unit testing with pytest
+- Git version control
+
+## How These Concepts Are Applied in the Project
+
+The `StudyAssistantAgent` class is used to represent the main agent. This class stores the file path, loads the document, and decides which tool should be used based on the user's selected task.
+
+Functions are used to separate the tools of the system. For example, `read_file()` is responsible for reading local files, `clean_text()` prepares the input text, `search_relevant_sentences()` finds relevant information, `summarize_text()` generates a short extractive summary, and `calculate_text_statistics()` returns basic document statistics.
+
+Lists are used to store sentences and search results. Dictionaries are used to return structured statistics such as word count, sentence count, and character count. Regular expressions are used for text cleaning, sentence splitting, and keyword extraction. Conditional statements are used inside the agent to select the correct tool. Exception handling is used to manage missing files, unsupported file formats, and empty files.
+
+## Tool Integration
+
+The tools are integrated through the agent workflow. The user starts the program and provides a file path and task type. The agent first calls the File Reader Tool to read the document. Then it calls the Text Cleaning Tool to prepare the data. After that, the agent selects one of the task-specific tools:
+
+- Summary Tool: creates a short extractive summary from the document.
+- Search Tool: finds sentences related to the user's query.
+- Statistics Tool: calculates word count, sentence count, and character count.
+
+This structure makes the system modular because each tool has a separate responsibility. The agent works as the controller that connects user input, tool execution, and final output.
+
+## Current Step 2 Status
+
+At this stage, the first working version of the system has been implemented. The application can be launched from the command line, process a user-selected file, use different tools, and return results. Basic unit tests have also been added for the text-processing tools.
