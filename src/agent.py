@@ -8,9 +8,7 @@ from tools import (
 
 
 class StudyAssistantAgent:
-    """
-    A simple intelligent agent that analyses study notes using tool functions.
-    """
+    #A simple intelligent agent that analyses study notes using tool functions.
 
     def __init__(self, file_path: str):
         self.file_path = file_path
@@ -18,16 +16,16 @@ class StudyAssistantAgent:
         self.cleaned_text = ""
 
     def load_document(self) -> None:
-        """
-        Loads and prepares the document before processing.
-        """
+        
+        #Loads and prepares the document before processing.
+        
         self.raw_text = read_file(self.file_path)
         self.cleaned_text = clean_text(self.raw_text)
 
     def handle_request(self, task_type: str, query: str = "") -> str:
-        """
-        Decides which tool should be used based on the user's request.
-        """
+        
+        #Decides which tool should be used based on the user's request.
+        
         if not self.cleaned_text:
             self.load_document()
 
