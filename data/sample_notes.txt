@@ -1,0 +1,8 @@
+Artificial intelligence is a branch of computer science that works on making systems that can do things that need human-like intelligence. These tasks could be figuring things out, learning, searching, planning, and understanding language.
+
+An intelligent agent is a piece of software that takes in information from its surroundings, processes it, and then does things to reach a goal.
+
+
+Testing is a necessary step in making software. Unit testing looks at single parts or functions. Integration testing makes sure that different parts of the system work together as they should.
+
+Deployment is the process of getting a software system ready for other people to install, set up, and use.
