@@ -67,6 +67,13 @@ docs/
   journal.md
   test_plan.md
   deployment.md
+<<<<<<< HEAD
 
 README.md
 requirements.txt
+=======
+  data_conversion.md
+
+README.md
+requirements.txt
+>>>>>>> 4589ee9 (Update README and add data conversion documentation for step 3)
