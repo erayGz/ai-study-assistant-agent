@@ -2,7 +2,7 @@
 
 ## Project Status
 
-Current stage: Step 2 – First working implementation and tool integration.
+Current stage: Step 3 – Testing, deployment preparation, and data conversion documentation.
 
 ## Project Description
 
@@ -17,8 +17,9 @@ The project is implemented as a simple agent-based system. The agent receives us
 - Search for relevant sentences
 - Generate a short extractive summary
 - Calculate document statistics
-- Handle basic user input errors
-- Include basic unit tests with pytest
+- Handle invalid input and basic errors
+- Include automated tests with pytest
+- Include deployment and testing documentation
 
 ## Agent-Based Approach
 
@@ -30,15 +31,21 @@ The system uses a single intelligent agent called `StudyAssistantAgent`. The age
 4. Select the correct tool based on the task.
 5. Return the final result to the user.
 
+The agent can select one of the following task types:
+
+- `summary`
+- `search`
+- `stats`
+
 ## Tools Used
 
 The system uses the following tools:
 
-- File Reader Tool
-- Text Cleaning Tool
-- Search Tool
-- Summarisation Tool
-- Statistics Tool
+- File Reader Tool – reads local `.txt` and `.md` files.
+- Text Cleaning Tool – removes repeated spaces and prepares text for processing.
+- Search Tool – finds sentences related to the user's query.
+- Summarisation Tool – generates a short extractive summary.
+- Statistics Tool – calculates word count, sentence count, and character count.
 
 ## Project Structure
 
@@ -51,9 +58,15 @@ src/
 
 tests/
   test_tools.py
+  test_agent.py
 
 data/
   sample_notes.txt
 
 docs/
   journal.md
+  test_plan.md
+  deployment.md
+
+README.md
+requirements.txt
