@@ -2,7 +2,7 @@
 
 ## Project Status
 
-Current stage: Step 3 – Testing, deployment preparation, and data conversion documentation.
+Current stage: Final Submission – Completed version.
 
 ## Project Description
 
@@ -19,7 +19,7 @@ The project is implemented as a simple agent-based system. The agent receives us
 - Calculate document statistics
 - Handle invalid input and basic errors
 - Include automated tests with pytest
-- Include deployment and testing documentation
+- Include testing, deployment, data conversion, and final report documentation
 
 ## Agent-Based Approach
 
@@ -41,11 +41,11 @@ The agent can select one of the following task types:
 
 The system uses the following tools:
 
-- File Reader Tool – reads local `.txt` and `.md` files.
-- Text Cleaning Tool – removes repeated spaces and prepares text for processing.
-- Search Tool – finds sentences related to the user's query.
-- Summarisation Tool – generates a short extractive summary.
-- Statistics Tool – calculates word count, sentence count, and character count.
+- **File Reader Tool** – reads local `.txt` and `.md` files.
+- **Text Cleaning Tool** – removes repeated spaces and prepares text for processing.
+- **Search Tool** – finds sentences related to the user's query.
+- **Summarisation Tool** – generates a short extractive summary.
+- **Statistics Tool** – calculates word count, sentence count, and character count.
 
 ## Project Structure
 
@@ -67,13 +67,8 @@ docs/
   journal.md
   test_plan.md
   deployment.md
-<<<<<<< HEAD
-
-README.md
-requirements.txt
-=======
   data_conversion.md
+  final_report.md
 
 README.md
 requirements.txt
->>>>>>> 4589ee9 (Update README and add data conversion documentation for step 3)
