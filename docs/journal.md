@@ -105,3 +105,70 @@ This structure makes the system modular because each tool has a separate respons
 ## Current Step 2 Status
 
 At this stage, the first working version of the system has been implemented. The application can be launched from the command line, process a user-selected file, use different tools, and return results. Basic unit tests have also been added for the text-processing tools.
+
+## Step 3 – Testing Process, Deployment Preparation, and Data Conversion
+
+At this stage, the project was extended with automated testing, deployment preparation, and data conversion documentation. The main implementation from Step 2 was tested using both automated tests and manual command-line execution.
+
+The purpose of Step 3 was to verify that the AI Study Assistant Agent works correctly, handles invalid input, and can be prepared for controlled local deployment.
+
+## Testing Process
+
+The testing process includes:
+
+- tool testing,
+- functional testing of the main workflow,
+- input validation testing,
+- error handling testing,
+- agent workflow testing.
+
+The project uses `pytest` for automated testing. The tests are stored in the `tests/` folder.
+
+The tool tests verify that the individual text-processing functions work correctly. These tests cover text cleaning, sentence splitting, keyword extraction, search, summarisation, and statistics calculation.
+
+The agent tests verify that the main system workflow works correctly when the user selects `summary`, `search`, or `stats`. These tests also check invalid input situations such as an empty search query, unknown task type, missing file, unsupported file type, and empty file.
+
+## Test Scenarios
+
+The main test scenarios are:
+
+1. Text cleaning test – verifies that repeated spaces are removed.
+2. Sentence splitting test – verifies that text is divided into separate sentences.
+3. Keyword extraction test – verifies that useful keywords are extracted and common words are ignored.
+4. Search tool test – verifies that relevant sentences are returned for a search query.
+5. Summary tool test – verifies that a short summary is generated.
+6. Statistics tool test – verifies that word count and sentence count are calculated.
+7. Agent summary workflow test – verifies that the agent returns a summary for a valid file.
+8. Agent search workflow test – verifies that the agent returns relevant information for a query.
+9. Agent statistics workflow test – verifies that document statistics are returned.
+10. Empty search query test – verifies input validation.
+11. Unknown task type test – verifies task validation.
+12. Missing file test – verifies error handling.
+13. Unsupported file type test – verifies error handling.
+14. Empty file test – verifies error handling.
+
+The final automated test result for Step 3 was:
+
+14 passed
+
+## Final Submission – Completed System
+
+In the final stage, the AI Study Assistant Agent was completed as a working Python-based command-line application. The system includes an agent-based workflow, tool functions, user input handling, automated testing, deployment preparation, and documentation.
+
+The final version of the system can read local `.txt` and `.md` files, clean the input text, generate a short summary, search for relevant sentences, and calculate document statistics. The agent controls the workflow by receiving the user request, selecting the correct tool, and returning the result.
+
+The final system includes the following main parts:
+
+- `src/main.py` – command-line interface and user input handling,
+- `src/agent.py` – agent workflow and task selection,
+- `src/tools.py` – file reading, text cleaning, search, summary, and statistics tools,
+- `tests/test_tools.py` – tests for tool functions,
+- `tests/test_agent.py` – tests for the main agent workflow,
+- `docs/test_plan.md` – testing process and test scenarios,
+- `docs/deployment.md` – deployment preparation,
+- `docs/data_conversion.md` – data conversion and processing explanation,
+- `docs/final_report.md` – final project report.
+
+The final testing result was:
+
+14 passed
